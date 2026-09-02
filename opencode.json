@@ -1,0 +1,83 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "instructions": [
+    "CONSTITUTION.md"
+  ],
+  "share": "disabled",
+  "autoupdate": false,
+  "model": "openrouter/anthropic/claude-sonnet-5",
+  "small_model": "openrouter/anthropic/claude-haiku-4.5",
+  "permission": {
+    "*": "allow",
+    "question": "deny",
+    "task": "deny",
+    "external_directory": "deny",
+    "read": {
+      "*": "allow",
+      ".env": "deny",
+      ".env.*": "deny",
+      "*.env": "deny",
+      "**/secrets/**": "deny",
+      "~/.ssh/**": "deny",
+      "~/.local/share/opencode/auth.json": "deny"
+    },
+    "edit": {
+      "*": "allow",
+      "CONSTITUTION.md": "deny",
+      "STANDING_APPROVALS.md": "deny",
+      "OWNER_NOTES.md": "deny",
+      "opencode.json": "deny",
+      "AGENTS.md": "deny",
+      "PROMPT_DAILY.md": "deny",
+      "PROMPT_WEEKLY.md": "deny",
+      "scripts/**": "deny",
+      "deploy/**": "deny",
+      "requests/decisions/**": "deny",
+      ".env": "deny",
+      ".env.*": "deny"
+    },
+    "bash": {
+      "*": "allow",
+      "sudo *": "deny",
+      "su *": "deny",
+      "rm -rf *": "deny",
+      "rm -r *": "deny",
+      "rm -fr *": "deny",
+      "git push --force*": "deny",
+      "git push -f*": "deny",
+      "git reset --hard*": "deny",
+      "git commit --author*": "deny",
+      "git -c user.*": "deny",
+      "git config user.*": "deny",
+      "git config --global*": "deny",
+      "systemctl *": "deny",
+      "crontab *": "deny",
+      "curl * .env*": "deny",
+      "cat .env*": "deny",
+      "cat *.env": "deny",
+      "printenv*": "deny",
+      "env": "deny",
+      "export *": "deny",
+      "ssh *": "deny",
+      "scp *": "deny",
+      "nc *": "deny",
+      "nohup *": "deny",
+      "* &": "deny"
+    }
+  },
+  "agent": {
+    "build": {
+      "description": "Daily work session. Sonnet-class. One increment, then stop.",
+      "mode": "primary",
+      "model": "openrouter/anthropic/claude-sonnet-5",
+      "steps": 80
+    },
+    "strategy": {
+      "description": "Weekly strategy session. Opus-class. Review, decide, plan, stop.",
+      "mode": "primary",
+      "model": "openrouter/anthropic/claude-opus-5",
+      "steps": 60
+    }
+  },
+  "lsp": false
+}

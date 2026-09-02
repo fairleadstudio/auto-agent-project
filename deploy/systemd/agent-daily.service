@@ -1,0 +1,13 @@
+[Unit]
+Description=Auto-agent daily work session (slot 1)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=agent
+WorkingDirectory=/home/agent/repo
+EnvironmentFile=/home/agent/repo/.env
+ExecStart=/home/agent/repo/scripts/run_session.sh daily 1
+TimeoutStartSec=2400
+Nice=10

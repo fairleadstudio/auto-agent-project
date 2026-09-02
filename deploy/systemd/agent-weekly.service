@@ -1,0 +1,11 @@
+[Unit]
+Description=Auto-agent weekly strategy session
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=agent
+WorkingDirectory=/home/agent/repo
+EnvironmentFile=/home/agent/repo/.env
+ExecStart=/home/agent/repo/scripts/run_session.sh weekly
+TimeoutStartSec=4200

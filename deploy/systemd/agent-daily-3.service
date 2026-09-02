@@ -1,0 +1,11 @@
+[Unit]
+Description=Auto-agent daily work session (slot 3, honors cadence_per_day)
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=agent
+WorkingDirectory=/home/agent/repo
+EnvironmentFile=/home/agent/repo/.env
+ExecStart=/home/agent/repo/scripts/run_session.sh daily 3
+TimeoutStartSec=2400
