@@ -8,7 +8,7 @@ session, and is operational. This one is altitude, not tasks.
 
 ---
 
-**Last updated:** September 1, 2026
+**Last updated:** September 1, 2026 (evening)
 **Phase:** Pre-launch (design closed at v1.3; rails not yet built)
 **Day:** Not yet started — Day 0 is the first agent wake
 
@@ -95,10 +95,28 @@ None.
 - Whether the 20 hrs/month ceiling is one the Owner will actually hold
   to — still the most likely design assumption to break.
 
-## Next actions
+## Next actions (TODO, in order)
 
-See the "Next steps" section of the September 1 review, mirrored in
-`README.md`.
+1. [ ] Privacy.com account from checking account; three merchant-locked
+       cards: OpenRouter $300 total, DigitalOcean $10/mo, Cloudflare
+       $20/yr.
+2. [ ] OpenRouter under fairleadstudio+openrouter@: prepaid credits,
+       auto top-up OFF, key spend limit $300. Paste key into VPS .env
+       later, never into the repo.
+3. [ ] Polar store under fairleadstudio+polar@ (merchant of record).
+       Identity verification is on the Owner. Create an API key with
+       product-create and order-read scope only.
+4. [ ] DigitalOcean $6/mo 1 GB droplet, Ubuntu LTS, under
+       fairleadstudio+digitalocean@. SSH key only.
+5. [ ] Hand off to Claude Code: VPS setup per deploy/VPS_SETUP.md,
+       allowed_signers with the Owner public key, $2 dry run,
+       revocation drill.
+6. [ ] Pick the launch-post date and write it in OWNER_NOTES.md.
+7. [ ] Day 0: run the weekly session by hand, read the opportunity
+       portfolio in DECISIONS.md, enable the timers.
+
+Deferred until the agent asks (row 10): Coinbase/CDP account for the
+x402 rail; print-on-demand, marketplace, ad, and affiliate accounts.
 
 ---
 
