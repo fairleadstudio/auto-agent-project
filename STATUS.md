@@ -39,8 +39,7 @@ session, and is operational. This one is altitude, not tasks.
 
 ## What does not exist yet
 
-- Git repository and GitHub remote under the segregated identity
-- GitHub account and virtual card under the identity
+- Virtual card under the identity
 - OpenRouter key with prepaid credit limit, auto top-up off (or an
   Anthropic Console workspace with prepaid credits)
 - Domain registration (in progress), merchant-of-record store, payment
@@ -65,7 +64,8 @@ None.
 
 - Identity: Fairlead Studio, fairleadstudio@gmail.com, created
   September 1, 2026. Cloudflare account under it. Domain
-  fairleadstudio.com.
+  fairleadstudio.com. GitHub fairleadstudio; public repo live with
+  signed Owner commits.
 
 - Metric: absolute net dollars, realized only. Human interventions
   tracked as the second number in the write-up, never as success.

@@ -19,7 +19,7 @@ fairleadstudio+cloudflare@gmail.com, +openrouter@, +github@.
 | Service | Purpose | Identity | Credential location | Provisioned | Status |
 |---|---|---|---|---|---|
 | OpenRouter | model access, prepaid, auto top-up off | segregated | OPENROUTER_API_KEY (env, VPS) | pending | — |
-| GitHub | repo remote, public ledger | segregated | deploy key on VPS | pending | — |
+| GitHub | repo remote, public ledger: github.com/fairleadstudio/auto-agent-project | fairleadstudio@gmail.com | Owner: SSH auth + signing key on Mac; VPS: deploy key (pending) | 2026-09-01 | live; issues, discussions, wiki, projects off; PRs collaborators-only; commit comments off |
 | Cloudflare | DNS, registrar, hosting, Workers, analytics | fairleadstudio@gmail.com | CF_API_TOKEN (env, VPS, scoped) | 2026-09-01 | account created; API token not yet issued |
 | Domain | fairleadstudio.com via Cloudflare Registrar | fairleadstudio@gmail.com | Owner only | 2026-09-01 | registered; no DNS records or site yet |
 | Merchant of record | store, payment link, payouts | segregated | MOR_API_KEY (env, VPS, read + create-product scope only) | pending | — |
